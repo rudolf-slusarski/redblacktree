@@ -25,10 +25,6 @@ fn main() -> Result<(), Error> {
             },
         );
 
-        for n in 1..=1000 {
-            tree.insert(n)
-        }
-
         match command.0 {
             "insert" | "add" | "put" => {
                 tree.insert(command.1);

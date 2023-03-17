@@ -399,3 +399,17 @@ impl RedBlackTree {
         }
     }
 }
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_insert_1000() {
+        let mut tree = RedBlackTree::new();
+        for n in 1..=1000 {
+            tree.insert(n)
+        }
+        tree.print();
+    }
+}
